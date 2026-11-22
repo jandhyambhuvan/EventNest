@@ -1,0 +1,2 @@
+import{Moon,Sun}from'lucide-react';import{useTheme}from'../context/ThemeContext';
+export default function ThemeToggle({compact=false}){const{theme,toggle}=useTheme();return <button className={`theme-toggle ${compact?'compact':''}`} onClick={toggle} aria-label={`Switch to ${theme==='dark'?'bright':'dark'} theme`} title={`Switch to ${theme==='dark'?'bright':'dark'} theme`}>{theme==='dark'?<Sun size={16}/>:<Moon size={16}/>}<span>{theme==='dark'?'Bright':'Dark'}</span></button>}
